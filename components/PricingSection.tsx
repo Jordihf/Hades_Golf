@@ -7,35 +7,35 @@ const PricingSection: React.FC = () => {
     {
       name: "Asistente Básico",
       price: "150",
-      desc: "Operativa pura de reservas.",
+      desc: "Soporte informativo 24/7.",
       features: [
-        "Gestión operativa",
-        "Integración WhatsApp + Email",
-        "Atención 24/7",
-        "Soporte prioritario"
+        "Preguntas básicas del club",
+        "Información general (servicios, horarios)",
+        "Detalles de torneos y eventos",
+        "Soporte por WhatsApp + Web"
       ]
     },
     {
-      name: "Asistente Comercial",
+      name: "Asistente en Ventas",
       price: "190",
-      desc: "Proactividad en ventas IA.",
+      desc: "Gestión completa de reservas.",
       featured: true,
       features: [
         "Todo lo del Básico",
-        "Venta comercial activa",
-        "Gestión de ofertas",
-        "Seguimiento comercial"
+        "Reservas en tiempo real",
+        "Plataforma de pago integrada",
+        "Confirmación instantánea"
       ]
     },
     {
-      name: "Agente Internacional",
+      name: "Agente Comercial",
       price: "290",
-      desc: "Operación global completa.",
+      desc: "Expansión internacional autónoma.",
       features: [
-        "Todo lo del Comercial",
-        "Turoperación Europea",
-        "Pagos internacionales",
-        "Gestión de grupos"
+        "Todo lo de Asistente en Ventas",
+        "Base de operadores internacionales",
+        "Comercial autónomo proactivo",
+        "Gestión proactiva de acuerdos"
       ]
     }
   ];
@@ -48,9 +48,15 @@ const PricingSection: React.FC = () => {
           <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
             Automatización escalable diseñada para cualquier tamaño de club.
           </p>
-          <div className="mt-8 inline-flex items-center space-x-2 bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold shadow-xl">
-            <Info className="h-4 w-4 text-blue-400" />
-            <span>Setup Inicial: 250€ (pago único)</span>
+          <div className="mt-8 inline-flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="inline-flex items-center space-x-2 bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-xl">
+              <Zap className="h-4 w-4 text-blue-400" />
+              <span>Setup Inicial Óptimo: 500€ <span className="text-slate-400 font-normal ml-1">(Único pago)</span></span>
+            </div>
+            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-6 py-2.5 rounded-full text-sm font-bold">
+              <Info className="h-4 w-4" />
+              <span>Incluye integración GolfManager / Tee One</span>
+            </div>
           </div>
         </div>
 
@@ -77,7 +83,7 @@ const PricingSection: React.FC = () => {
                   <span className={`ml-2 text-sm font-medium ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>/mes</span>
                 </div>
                 <p className={`text-[10px] font-bold mt-3 uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>
-                   {(parseInt(plan.price) * 0.75).toFixed(0)}€/mes con promo 25%
+                   {(parseInt(plan.price) * 0.80).toFixed(0)}€/mes con promo 20%
                 </p>
               </div>
 
@@ -103,7 +109,7 @@ const PricingSection: React.FC = () => {
 
         <div className="mt-20 bg-blue-50/50 backdrop-blur-sm border border-blue-100 rounded-[2.5rem] p-10 text-center max-w-3xl mx-auto shadow-sm">
           <h4 className="text-2xl font-bold text-blue-900 mb-4">¡Solo quedan 20 plazas con promo!</h4>
-          <p className="text-blue-700 mb-8 font-light">Consigue un 25% de descuento de por vida para tu club si eres de los primeros 20 en unirte.</p>
+          <p className="text-blue-700 mb-8 font-light">Consigue un 20% de descuento de por vida para tu club si eres de los primeros 20 en unirte.</p>
           <div className="flex items-center justify-center space-x-4">
              <div className="flex -space-x-3">
                 {[1,2,3,4,5].map(i => <div key={i} className="h-10 w-10 rounded-full border-2 border-white bg-slate-200 shadow-sm overflow-hidden"><img src={`https://i.pravatar.cc/40?u=${i}`} alt="user" /></div>)}

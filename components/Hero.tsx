@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8 animate-pulse">
             <Sparkles className="h-3 w-3" />
-            <span>Oferta: -25% de por vida para los primeros 20 clubs</span>
+            <span>Oferta: -20% de por vida para los primeros 20 clubs</span>
           </div>
           <h1 className="text-5xl lg:text-8xl font-extrabold text-slate-900 tracking-tight leading-[1] mb-8">
             Vende más Golf. <br/> <span className="text-gradient">Gestiona menos emails.</span>
