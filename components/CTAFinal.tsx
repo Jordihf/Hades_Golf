@@ -28,9 +28,14 @@ const CTAFinal: React.FC = () => {
               </button>
             </div>
             
-            <p className="mt-8 text-xs text-slate-500 uppercase tracking-widest font-bold">
-              Configuración óptima: pago único de 500€ incluido en la primera facturación.
-            </p>
+            <div className="mt-8 space-y-1">
+              <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">
+                Setup de configuración: 500€ pago único.
+              </p>
+              <p className="text-[10px] text-blue-400 uppercase tracking-widest font-bold">
+                ¡GRATIS si eliges facturación anual!
+              </p>
+            </div>
           </div>
         </div>
       </div>

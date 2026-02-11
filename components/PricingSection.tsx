@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Check, Info, Zap } from 'lucide-react';
+import { Check, Info, Zap, Gift } from 'lucide-react';
 
 const PricingSection: React.FC = () => {
   const plans = [
     {
       name: "Asistente Básico",
-      price: "150",
+      price: "199",
       desc: "Soporte informativo 24/7.",
       features: [
         "Preguntas básicas del club",
@@ -17,7 +17,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Asistente en Ventas",
-      price: "190",
+      price: "299",
       desc: "Gestión completa de reservas.",
       featured: true,
       features: [
@@ -29,7 +29,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Agente Comercial",
-      price: "290",
+      price: "399",
       desc: "Expansión internacional autónoma.",
       features: [
         "Todo lo de Asistente en Ventas",
@@ -48,14 +48,21 @@ const PricingSection: React.FC = () => {
           <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
             Automatización escalable diseñada para cualquier tamaño de club.
           </p>
-          <div className="mt-8 inline-flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <div className="inline-flex items-center space-x-2 bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-xl">
-              <Zap className="h-4 w-4 text-blue-400" />
-              <span>Setup Inicial Óptimo: 500€ <span className="text-slate-400 font-normal ml-1">(Único pago)</span></span>
+          
+          <div className="mt-8 flex flex-col items-center space-y-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="inline-flex items-center space-x-2 bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-xl">
+                <Zap className="h-4 w-4 text-blue-400" />
+                <span>Setup Inicial: 500€ <span className="text-slate-400 font-normal ml-1">(Único pago)</span></span>
+              </div>
+              <div className="inline-flex items-center space-x-2 bg-green-100 text-green-700 px-6 py-2.5 rounded-full text-sm font-bold border border-green-200">
+                <Gift className="h-4 w-4" />
+                <span>Setup GRATIS con Pago Anual</span>
+              </div>
             </div>
             <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-6 py-2.5 rounded-full text-sm font-bold">
               <Info className="h-4 w-4" />
-              <span>Incluye integración GolfManager / Tee One</span>
+              <span>Integración GolfManager / Tee One incluida</span>
             </div>
           </div>
         </div>
@@ -82,9 +89,14 @@ const PricingSection: React.FC = () => {
                   <span className="text-5xl font-black tracking-tighter">{plan.price}€</span>
                   <span className={`ml-2 text-sm font-medium ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>/mes</span>
                 </div>
-                <p className={`text-[10px] font-bold mt-3 uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>
-                   {(parseInt(plan.price) * 0.80).toFixed(0)}€/mes con promo 20%
-                </p>
+                <div className="mt-3 space-y-1">
+                  <p className={`text-[10px] font-bold uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>
+                    {(parseFloat(plan.price) * 0.80).toFixed(0)}€/mes con promo 20%
+                  </p>
+                  <p className={`text-[9px] opacity-70 ${plan.featured ? 'text-white' : 'text-slate-400'}`}>
+                    Ahorra 500€ de setup pagando anualmente
+                  </p>
+                </div>
               </div>
 
               <div className="space-y-4 mb-10 flex-1">
