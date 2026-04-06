@@ -1,12 +1,13 @@
 {
-  "name": "stellaris-golf-landing---ai-sales-agent",
+  "name": "hades-golf-landing---ai-sales-agent",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "tsc"
   },
   "dependencies": {
     "lucide-react": "^0.563.0",

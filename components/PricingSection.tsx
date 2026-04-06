@@ -17,7 +17,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Asistente en Ventas",
-      price: "299",
+      price: "395",
       desc: "Gestión completa de reservas.",
       featured: true,
       features: [
@@ -29,7 +29,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Agente Comercial",
-      price: "399",
+      price: "495",
       desc: "Expansión internacional autónoma.",
       features: [
         "Todo lo de Asistente en Ventas",
@@ -91,7 +91,7 @@ const PricingSection: React.FC = () => {
                 </div>
                 <div className="mt-3 space-y-1">
                   <p className={`text-[10px] font-bold uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>
-                    {(parseFloat(plan.price) * 0.80).toFixed(0)}€/mes con promo 20%
+                    {(parseFloat(plan.price) * 0.75).toFixed(0)}€/mes con promo 25%
                   </p>
                   <p className={`text-[9px] opacity-70 ${plan.featured ? 'text-white' : 'text-slate-400'}`}>
                     Ahorra 500€ de setup pagando anualmente
@@ -121,7 +121,7 @@ const PricingSection: React.FC = () => {
 
         <div className="mt-20 bg-blue-50/50 backdrop-blur-sm border border-blue-100 rounded-[2.5rem] p-10 text-center max-w-3xl mx-auto shadow-sm">
           <h4 className="text-2xl font-bold text-blue-900 mb-4">¡Solo quedan 20 plazas con promo!</h4>
-          <p className="text-blue-700 mb-8 font-light">Consigue un 20% de descuento de por vida para tu club si eres de los primeros 20 en unirte.</p>
+          <p className="text-blue-700 mb-8 font-light">Consigue un 25% de descuento de por vida para tu club si eres de los primeros 20 en unirte.</p>
           <div className="flex items-center justify-center space-x-4">
              <div className="flex -space-x-3">
                 {[1,2,3,4,5].map(i => <div key={i} className="h-10 w-10 rounded-full border-2 border-white bg-slate-200 shadow-sm overflow-hidden"><img src={`https://i.pravatar.cc/40?u=${i}`} alt="user" /></div>)}

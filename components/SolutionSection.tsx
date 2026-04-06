@@ -9,7 +9,7 @@ const SolutionSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-              <span>La Solución Stellaris</span>
+              <span>La Solución Hades</span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-extrabold mb-8 leading-[1.1] tracking-tighter">
               El asistente que <br/><span className="text-blue-500 italic">siempre</span> responde.
@@ -45,7 +45,7 @@ const SolutionSection: React.FC = () => {
                   <Zap className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-1">Impacto Stellaris</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] mb-1">Impacto Hades</p>
                   <p className="text-2xl font-black tracking-tight text-white">Eficiencia +85%</p>
                 </div>
               </div>

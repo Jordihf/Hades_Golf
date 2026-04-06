@@ -50,7 +50,7 @@ const ProblemSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Card: La Solución (Stellaris) */}
+          {/* Card: La Solución (Hades) */}
           <div className="bg-slate-900 rounded-[3rem] p-10 border border-slate-800 flex flex-col justify-between text-white shadow-2xl shadow-blue-900/20 group relative overflow-hidden">
             {/* Ambient light animation */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/20 rounded-full blur-[80px] animate-pulse"></div>
@@ -60,7 +60,7 @@ const ProblemSection: React.FC = () => {
                 <div className="h-10 w-10 bg-blue-600 rounded-xl shadow-lg flex items-center justify-center text-white">
                   <Bot size={20} />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Stellaris IA</span>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Hades IA</span>
               </div>
               <h3 className="text-3xl font-bold mb-4">Eficiencia instantánea</h3>
               <p className="text-slate-400 font-light leading-relaxed mb-8">

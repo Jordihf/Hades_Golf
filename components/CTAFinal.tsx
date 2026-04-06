@@ -14,7 +14,7 @@ const CTAFinal: React.FC = () => {
               ¿Listo para dar el salto?
             </h2>
             <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light">
-              Únete a los clubs que ya están automatizando su venta. Recuerda: solo quedan <span className="text-blue-400 font-bold">20 plazas</span> con el 20% de descuento de por vida.
+              Únete a los clubs que ya están automatizando su venta. Recuerda: solo quedan <span className="text-blue-400 font-bold">20 plazas</span> con el 25% de descuento de por vida.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

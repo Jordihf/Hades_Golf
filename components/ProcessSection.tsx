@@ -30,7 +30,7 @@ const ProcessSection: React.FC = () => {
                {/* Animated rings */}
                <div className="absolute inset-0 border-4 border-blue-400/30 rounded-[2.5rem] animate-ping opacity-20"></div>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">Gestión Stellaris</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">Gestión Hades</h3>
             <p className="text-slate-500 text-sm max-w-[240px]">La IA cotiza, revalida stock y cierra la reserva al instante.</p>
           </div>
 

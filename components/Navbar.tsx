@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <span className="text-2xl font-extrabold tracking-tighter text-blue-600 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-              STELLARIS <span className="text-slate-900">GOLF</span>
+              HADES <span className="text-slate-900">GOLF</span>
             </span>
           </div>
           
@@ -46,12 +46,6 @@ const Navbar: React.FC = () => {
             <button onClick={() => scrollTo('solucion')} className="text-sm font-bold text-slate-600 hover:text-blue-600 transition uppercase tracking-wider">Solución</button>
             <button onClick={() => scrollTo('opciones')} className="text-sm font-bold text-slate-600 hover:text-blue-600 transition uppercase tracking-wider">Opciones</button>
             <button onClick={() => scrollTo('precios')} className="text-sm font-bold text-slate-600 hover:text-blue-600 transition uppercase tracking-wider">Precios</button>
-            <button 
-              onClick={() => scrollTo('demo')}
-              className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-extrabold hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-200"
-            >
-              Demo en Vivo
-            </button>
           </div>
 
           <div className="md:hidden">
@@ -69,9 +63,6 @@ const Navbar: React.FC = () => {
           <button onClick={() => scrollTo('solucion')} className="text-left text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">Solución</button>
           <button onClick={() => scrollTo('opciones')} className="text-left text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">Opciones</button>
           <button onClick={() => scrollTo('precios')} className="text-left text-xl font-bold text-slate-900 border-b border-slate-100 pb-3">Precios</button>
-          <button onClick={() => scrollTo('demo')} className="bg-blue-600 text-white py-4 rounded-xl font-black text-lg shadow-lg">
-            Probar Demo
-          </button>
         </div>
       )}
     </nav>
