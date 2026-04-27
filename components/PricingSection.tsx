@@ -5,14 +5,14 @@ import { Check, Info, Zap, Gift } from 'lucide-react';
 const PricingSection: React.FC = () => {
   const plans = [
     {
-      name: "Asistente Básico",
+      name: "Plan Starter",
       price: "199",
-      desc: "Soporte informativo 24/7.",
+      desc: "Soporte y promociones por email.",
       features: [
-        "Preguntas básicas del club",
-        "Información general (servicios, horarios)",
-        "Detalles de torneos y eventos",
-        "Soporte por WhatsApp + Web"
+        "Solo correo electrónico (sin WhatsApp)",
+        "Carga de Base de Datos depurada",
+        "Recepción y envío de emails automatizado",
+        "Promociones e información general"
       ]
     },
     {
@@ -21,14 +21,14 @@ const PricingSection: React.FC = () => {
       desc: "Gestión completa de reservas.",
       featured: true,
       features: [
-        "Todo lo del Básico",
+        "Todo lo del Plan Starter",
         "Reservas en tiempo real",
-        "Plataforma de pago integrada",
-        "Confirmación instantánea"
+        "Soporte Omnicanal (WhatsApp, Web)",
+        "Confirmación y pago instantáneo"
       ]
     },
     {
-      name: "Agente Comercial",
+      name: "Agente Internacional",
       price: "495",
       desc: "Expansión internacional autónoma.",
       features: [
