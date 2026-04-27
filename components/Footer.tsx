@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <span className="text-2xl font-extrabold tracking-tighter text-blue-600">
               HADES <span className="text-slate-900">GOLF</span>
             </span>
-            <p className="text-slate-400 text-sm mt-2">© 2024 Hades Golf. Todos los derechos reservados.</p>
+            <p className="text-slate-400 text-sm mt-2">© 2026 Hades Golf. Todos los derechos reservados.</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8">
