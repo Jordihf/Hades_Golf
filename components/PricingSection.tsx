@@ -111,13 +111,13 @@ const PricingSection: React.FC = () => {
                 ))}
               </div>
 
-              <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all shadow-lg ${
+              <a href={`mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20el%20${encodeURIComponent(plan.name)}`} className={`block text-center w-full py-5 rounded-2xl font-bold text-lg transition-all shadow-lg ${
                 plan.featured 
                 ? 'bg-white text-blue-600 hover:bg-slate-50' 
                 : 'bg-slate-900 text-white hover:bg-slate-800'
               }`}>
-                Contratar
-              </button>
+                Quiero información
+              </a>
             </div>
           ))}
         </div>

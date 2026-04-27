@@ -45,9 +45,9 @@ const OptionsSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <button className="relative z-10 w-full py-4 bg-slate-100 text-slate-700 rounded-2xl font-bold hover:bg-slate-200 transition shadow-sm">
-              Ver Ejemplo
-            </button>
+            <a href="mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20el%20Asistente%20Starter" className="relative z-10 block text-center w-full py-4 bg-slate-100 text-slate-700 rounded-2xl font-bold hover:bg-slate-200 transition shadow-sm">
+              Quiero información
+            </a>
           </div>
 
           {/* Option 2: Plan PRO */}
@@ -83,9 +83,9 @@ const OptionsSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <button className="relative z-10 w-full py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-500/20">
-              Ver Ejemplo
-            </button>
+            <a href="mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20el%20Asistente%20PRO" className="relative z-10 block text-center w-full py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-500/20">
+              Quiero información
+            </a>
           </div>
 
           {/* Option 3: Equipo de Ventas */}
@@ -121,9 +121,9 @@ const OptionsSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <button className="relative z-10 w-full py-4 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700 transition shadow-xl border border-slate-700">
-              Ver Ejemplo
-            </button>
+            <a href="mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20el%20Equipo%20de%20Ventas" className="relative z-10 block text-center w-full py-4 bg-slate-800 text-white rounded-2xl font-bold hover:bg-slate-700 transition shadow-xl border border-slate-700">
+              Quiero información
+            </a>
           </div>
         </div>
       </div>

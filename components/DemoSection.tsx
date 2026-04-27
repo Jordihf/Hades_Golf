@@ -13,9 +13,9 @@ const DemoSection: React.FC = () => {
             <p className="text-xl text-slate-300 mb-8 max-w-xl">
               En menos de 2 minutos puedes ver cómo el asistente responde a un operador, da precio real, guarda una operación y cierra una reserva automáticamente.
             </p>
-            <button className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-500/20 flex items-center justify-center mx-auto lg:mx-0">
-               Solicitar demo ahora
-            </button>
+            <a href="mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20Hades%20Golf" className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-500/20 inline-flex items-center justify-center mx-auto lg:mx-0">
+               Quiero información
+            </a>
           </div>
           
           <div className="flex-1 w-full max-w-xl relative">
