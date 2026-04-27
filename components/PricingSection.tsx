@@ -16,26 +16,26 @@ const PricingSection: React.FC = () => {
       ]
     },
     {
-      name: "Asistente en Ventas",
+      name: "Plan PRO",
       price: "395",
-      desc: "Gestión completa de reservas.",
+      desc: "Atención omnicanal avanzada.",
       featured: true,
       features: [
         "Todo lo del Plan Starter",
-        "Reservas en tiempo real",
-        "Soporte Omnicanal (WhatsApp, Web)",
-        "Confirmación y pago instantáneo"
+        "Atención instantánea por WhatsApp",
+        "Integración Web y Chatbot",
+        "Filtro inteligente de Leads y Dudas"
       ]
     },
     {
-      name: "Agente Internacional",
-      price: "495",
-      desc: "Expansión internacional autónoma.",
+      name: "Equipo de Ventas",
+      price: "595",
+      desc: "Reservas, B2B/B2C y pasarela de pago.",
       features: [
-        "Todo lo de Asistente en Ventas",
-        "Base de operadores internacionales",
-        "Comercial autónomo proactivo",
-        "Gestión proactiva de acuerdos"
+        "Múltiples agentes configurables",
+        "Reservas en tiempo real B2B y B2C",
+        "Contacto proactivo con Turoperadores",
+        "Cobros con pasarela de pago integrada"
       ]
     }
   ];
@@ -87,7 +87,10 @@ const PricingSection: React.FC = () => {
               <div className="mb-8">
                 <div className="flex items-baseline">
                   <span className="text-5xl font-black tracking-tighter">{plan.price}€</span>
-                  <span className={`ml-2 text-sm font-medium ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>/mes</span>
+                  <span className={`ml-2 text-sm font-medium flex flex-col justify-end pb-1 ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>
+                    <span>/mes</span>
+                    {plan.name === "Equipo de Ventas" && <span className="text-[10px] uppercase font-bold tracking-widest mt-0.5">desde</span>}
+                  </span>
                 </div>
                 <div className="mt-3 space-y-1">
                   <p className={`text-[10px] font-bold uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>

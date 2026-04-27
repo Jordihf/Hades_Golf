@@ -50,16 +50,16 @@ const OptionsSection: React.FC = () => {
             </button>
           </div>
 
-          {/* Option 2: Asistente en Ventas */}
+          {/* Option 2: Plan PRO */}
           <div className="bg-white rounded-[3rem] p-10 shadow-2xl shadow-blue-900/5 border-2 border-blue-100 flex flex-col hover:-translate-y-2 transition duration-500 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-0 opacity-80 group-hover:scale-110 transition-transform"></div>
             <div className="relative z-10 flex-1">
               <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-[10px] font-bold mb-6">
                 <Zap className="h-3 w-3" />
-                <span>OPERATIVA OMNICANAL</span>
+                <span>ATENCIÓN OMNICANAL</span>
               </div>
-              <h3 className="text-2xl font-extrabold text-slate-900 mb-2">Asistente de Reservas</h3>
-              <p className="text-blue-600 font-semibold mb-8 uppercase tracking-wider text-xs">Para cerrar ventas 24/7</p>
+              <h3 className="text-2xl font-extrabold text-slate-900 mb-2">Asistente PRO</h3>
+              <p className="text-blue-600 font-semibold mb-8 uppercase tracking-wider text-xs">Para dominar WhatsApp y Web</p>
               
               <div className="space-y-6 mb-10">
                 <div>
@@ -67,9 +67,9 @@ const OptionsSection: React.FC = () => {
                     <Zap className="h-4 w-4 mr-2 text-blue-500" /> ¿Qué hace?
                   </p>
                   <ul className="text-slate-500 space-y-2 pl-6 list-disc text-sm">
-                    <li>Gestiona peticiones en Web y WhatsApp.</li>
-                    <li>Sincroniza stock, precios y pasarela de pago.</li>
-                    <li>Cierra reservas en tiempo real.</li>
+                    <li>Atención instantánea por WhatsApp y Chatbot web.</li>
+                    <li>Resuelve el 90% de las dudas antes de que llamen.</li>
+                    <li>Clasifica los "Leads" y filtra el ruido.</li>
                   </ul>
                 </div>
                 <div>
@@ -77,8 +77,8 @@ const OptionsSection: React.FC = () => {
                     <Target className="h-4 w-4 mr-2 text-blue-500" /> Ideal si...
                   </p>
                   <ul className="text-slate-500 space-y-2 pl-6 list-disc text-sm">
-                    <li>Pierdes reservas por responder tarde.</li>
-                    <li>Quieres evitar errores y overbooking manual.</li>
+                    <li>El teléfono del club no para de sonar con dudas básicas.</li>
+                    <li>Quieres dar una imagen premium y moderna.</li>
                   </ul>
                 </div>
               </div>
@@ -88,16 +88,16 @@ const OptionsSection: React.FC = () => {
             </button>
           </div>
 
-          {/* Option 3: Agente Internacional */}
+          {/* Option 3: Equipo de Ventas */}
           <div className="bg-slate-900 rounded-[3rem] p-10 shadow-xl shadow-blue-900/20 border border-slate-800 flex flex-col hover:-translate-y-2 transition duration-500 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-900/50 rounded-bl-full -z-0 opacity-20 group-hover:scale-110 transition-transform"></div>
             <div className="relative z-10 flex-1 text-white">
               <div className="inline-flex items-center space-x-2 bg-blue-500 text-white px-4 py-1 rounded-full text-[10px] font-bold mb-6">
                 <Users className="h-3 w-3" />
-                <span>VENTA PROACTIVA</span>
+                <span>MULTICANAL & PAGOS</span>
               </div>
-              <h3 className="text-2xl font-extrabold mb-2">Agente Internacional</h3>
-              <p className="text-blue-400 font-semibold mb-8 uppercase tracking-wider text-xs">Para abrir nuevos mercados</p>
+              <h3 className="text-2xl font-extrabold mb-2">Equipo de Ventas</h3>
+              <p className="text-blue-400 font-semibold mb-8 uppercase tracking-wider text-xs">Reservas B2B / B2C Autónomas</p>
               
               <div className="space-y-6 mb-10">
                 <div>
@@ -105,9 +105,9 @@ const OptionsSection: React.FC = () => {
                     <Zap className="h-4 w-4 mr-2 text-blue-400" /> ¿Qué hace?
                   </p>
                   <ul className="text-slate-400 space-y-2 pl-6 list-disc text-sm">
-                    <li>Conecta con nuestra BBDD de Turoperadores.</li>
-                    <li>Lanza ofertas dinámicas y negocia acuerdos.</li>
-                    <li>Comercializa de forma autónoma.</li>
+                    <li>Gestiona múltiples agentes (Operadores, Clientes).</li>
+                    <li>Cierra reservas en tiempo real y realiza cobros.</li>
+                    <li>Contacta y negocia con Turoperadores.</li>
                   </ul>
                 </div>
                 <div>
@@ -115,8 +115,8 @@ const OptionsSection: React.FC = () => {
                     <Target className="h-4 w-4 mr-2 text-blue-400" /> Ideal si...
                   </p>
                   <ul className="text-slate-400 space-y-2 pl-6 list-disc text-sm">
-                    <li>Quieres más turistas internacionales.</li>
-                    <li>Buscas escalar sin contratar fuerza de ventas.</li>
+                    <li>Quieres aumentar la facturación directamente.</li>
+                    <li>Pierdes ventas por tardar en confirmar reservas.</li>
                   </ul>
                 </div>
               </div>
