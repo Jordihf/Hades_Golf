@@ -5,37 +5,40 @@ import { Check, Info, Zap, Gift } from 'lucide-react';
 const PricingSection: React.FC = () => {
   const plans = [
     {
-      name: "Plan Starter",
+      name: "Asistente Básico",
       price: "199",
-      desc: "Soporte y promociones por email.",
+      discountPrice: "149",
+      desc: "Soporte informativo 24/7.",
       features: [
-        "Solo correo electrónico (sin WhatsApp)",
-        "Carga de Base de Datos depurada",
-        "Recepción y envío de emails automatizado",
-        "Promociones e información general"
+        "Preguntas básicas del club",
+        "Información general (servicios, horarios)",
+        "Detalles de torneos y eventos",
+        "Soporte por Telegram y correo electrónico"
       ]
     },
     {
-      name: "Plan PRO",
+      name: "Agente Comercial",
       price: "395",
-      desc: "Atención omnicanal avanzada.",
+      discountPrice: "296",
+      desc: "Envío de comunicaciones proactivas.",
       featured: true,
       features: [
-        "Todo lo del Plan Starter",
-        "Atención instantánea por WhatsApp",
-        "Integración Web y Chatbot",
-        "Filtro inteligente de Leads y Dudas"
+        "Todo lo del Básico",
+        "Envío de correos de forma autónoma",
+        "Comunicaciones a socios",
+        "Promoción de torneos y comunicados"
       ]
     },
     {
-      name: "Equipo de Ventas",
+      name: "IA Team",
       price: "595",
-      desc: "Reservas, B2B/B2C y pasarela de pago.",
+      discountPrice: "476",
+      desc: "100% configurable con ecosistema de agentes.",
       features: [
-        "Múltiples agentes configurables",
-        "Reservas en tiempo real B2B y B2C",
-        "Contacto proactivo con Turoperadores",
-        "Cobros con pasarela de pago integrada"
+        "Paquetización con hoteles y reservas",
+        "Campañas a operadores",
+        "Gestión de facturas",
+        "Creación y gestión de contratos"
       ]
     }
   ];
@@ -86,15 +89,12 @@ const PricingSection: React.FC = () => {
               
               <div className="mb-8">
                 <div className="flex items-baseline">
-                  <span className="text-5xl font-black tracking-tighter">{plan.price}€</span>
-                  <span className={`ml-2 text-sm font-medium flex flex-col justify-end pb-1 ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>
-                    <span>/mes</span>
-                    {plan.name === "Equipo de Ventas" && <span className="text-[10px] uppercase font-bold tracking-widest mt-0.5">desde</span>}
-                  </span>
+                  <span className="text-5xl font-black tracking-tighter">{plan.discountPrice}€</span>
+                  <span className={`ml-2 text-sm font-medium ${plan.featured ? 'text-blue-200' : 'text-slate-400'}`}>/mes</span>
                 </div>
                 <div className="mt-3 space-y-1">
                   <p className={`text-[10px] font-bold uppercase tracking-wider ${plan.featured ? 'text-blue-200' : 'text-blue-600'}`}>
-                    {(parseFloat(plan.price) * 0.75).toFixed(0)}€/mes con promo 25%
+                    Precio recomendado: <span className="line-through opacity-70">{plan.price}€/mes</span>
                   </p>
                   <p className={`text-[9px] opacity-70 ${plan.featured ? 'text-white' : 'text-slate-400'}`}>
                     Ahorra 500€ de setup pagando anualmente
@@ -111,13 +111,13 @@ const PricingSection: React.FC = () => {
                 ))}
               </div>
 
-              <a href={`mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20el%20${encodeURIComponent(plan.name)}`} className={`block text-center w-full py-5 rounded-2xl font-bold text-lg transition-all shadow-lg ${
+              <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all shadow-lg ${
                 plan.featured 
                 ? 'bg-white text-blue-600 hover:bg-slate-50' 
                 : 'bg-slate-900 text-white hover:bg-slate-800'
               }`}>
-                Quiero información
-              </a>
+                Contratar
+              </button>
             </div>
           ))}
         </div>

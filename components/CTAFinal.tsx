@@ -18,14 +18,14 @@ const CTAFinal: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="mailto:info@hadesgolf.com?subject=Quiero%20información%20sobre%20Hades%20Golf" className="w-full sm:w-auto bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-500/20 inline-flex items-center justify-center group">
-                Quiero información
+              <button className="w-full sm:w-auto bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-500/20 flex items-center justify-center group">
+                Reservar mi Plaza
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="mailto:info@hadesgolf.com?subject=Hablar%20con%20Ventas" className="w-full sm:w-auto glass-card border-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition inline-flex items-center justify-center">
+              </button>
+              <button className="w-full sm:w-auto glass-card border-white/20 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition flex items-center justify-center">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Hablar con Ventas
-              </a>
+              </button>
             </div>
             
             <div className="mt-8 space-y-1">

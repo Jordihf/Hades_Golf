@@ -1,32 +1,25 @@
 
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProblemSection from './components/ProblemSection';
-import SolutionSection from './components/SolutionSection';
-import OptionsSection from './components/OptionsSection';
-import ProcessSection from './components/ProcessSection';
-import PricingSection from './components/PricingSection';
-import WhySection from './components/WhySection';
-import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <SolutionSection />
-        <OptionsSection />
-        <ProcessSection />
-        <PricingSection />
-        <WhySection />
-        <CTAFinal />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 
