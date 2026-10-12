@@ -10,7 +10,16 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.check
 *.local
+
+# Claves y entornos: nunca al repositorio público
+.env
+.env.*
+!.env.example
+
+# Importes: no se publican hasta SHOW_PRICES=true (ver README)
+src/data/prices.json
 
 # Editor directories and files
 .vscode/*

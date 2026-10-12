@@ -1,0 +1,203 @@
+{
+  "_reglas": "Nombre del plan: si lleva la difusión de la nota, Plan Comunicación completo; si no, el del primer objetivo cuyo plan está completo (Datos = Ocupación + una pieza de visibilidad; Visibilidad = una pieza de visibilidad; Comunicación = LinkedIn + una pieza de visibilidad). Todo plan mensual lleva una pieza de visibilidad: no se puede quitar la última. Los importes viven en prices.json y solo entran en la web con SHOW_PRICES=true.",
+  "courseTypes": [
+    { "id": "comercial", "label": "Comercial" },
+    { "id": "socios", "label": "De socios" },
+    { "id": "mixto", "label": "Mixto" },
+    { "id": "hotel", "label": "Hotel de golf" }
+  ],
+  "bookingSystems": [
+    { "id": "golfmanager", "label": "GolfManager" },
+    { "id": "teeone", "label": "TeeOne" },
+    { "id": "otro", "label": "Otro" },
+    { "id": "nose", "label": "No lo sé" }
+  ],
+  "objectives": [
+    { "id": "franjas", "label": "Ver mis franjas y días flojos", "plan": "datos", "pieces": ["analiza", "monitor"], "core": ["analiza"] },
+    { "id": "ia", "label": "Saber si la IA cita mi campo y qué mejorar", "plan": "visibilidad", "pieces": ["monitor"], "core": ["monitor", "competitiva"] },
+    { "id": "posicionar", "label": "Posicionar el club: golf de empresa, eventos y patrocinadores", "plan": "comunicacion", "pieces": ["linkedin", "monitor"], "core": ["linkedin"] },
+    { "id": "medios", "label": "Que se hable del club en medios digitales", "plan": "comunicacion", "pieces": ["linkedin", "monitor", "nota"], "core": ["nota"] },
+    { "id": "mercados", "label": "Saber qué mercados extranjeros atacar", "plan": "datos", "pieces": ["mercados"], "core": ["mercados"] }
+  ],
+  "objectiveOrder": {
+    "comercial": ["franjas", "ia", "mercados", "posicionar", "medios"],
+    "mixto": ["franjas", "posicionar", "ia", "medios", "mercados"],
+    "socios": ["posicionar", "medios", "ia", "franjas", "mercados"],
+    "hotel": ["ia", "posicionar", "medios", "mercados"]
+  },
+  "maxObjectives": 3,
+  "comingSoon": [
+    { "id": "ofertas", "label": "Ofertas con tu disponibilidad", "text": "Aún no lo hacemos." },
+    { "id": "campanas", "label": "Campañas a tu base de jugadores", "text": "Aún no lo hacemos." },
+    { "id": "paquetes", "label": "Paquetes golf + hotel", "text": "Aún no lo hacemos." },
+    { "id": "redes", "label": "Instagram y Facebook del club", "text": "Todavía no: necesitamos un permiso de Meta que aún no hemos pedido." },
+    { "id": "socios-nuevos", "label": "Captar socios nuevos", "text": "Hoy no tenemos ninguna pieza para esto, y preferimos decírtelo." }
+  ],
+  "ocupacionOtro": {
+    "id": "ocupacion",
+    "label": "Ocupación por franjas con mi programa de reservas",
+    "text": "Hoy solo sabemos estimar la ocupación de campos que usan GolfManager o TeeOne. No va en tu plan."
+  },
+  "pieces": {
+    "analiza": {
+      "name": "Ocupación por franjas",
+      "status": "matiz",
+      "visibilityPiece": false,
+      "text": "Estimamos tu ocupación por franjas y días a partir de tu sistema de reservas. Hoy solo sabemos hacerlo con campos que usan GolfManager o TeeOne. El informe lleva solo tus datos.",
+      "matiz": "Todavía no la activamos: antes revisamos las condiciones de uso de GolfManager y TeeOne y preparamos tu informe. Después comprobamos contigo tu caso y nos das tu autorización por escrito.",
+      "measure": "Plazas libres estimadas por franja y día, mes a mes.",
+      "agents": "Revisan cada mañana la disponibilidad de tu sistema de reservas.",
+      "human": "Comprobamos contigo tu sistema de reservas y nos das tu autorización por escrito antes de activar nada."
+    },
+    "monitor": {
+      "name": "Visibilidad en IA",
+      "status": "matiz",
+      "visibilityPiece": true,
+      "excludes": ["competitiva"],
+      "text": "Cada mes hacemos preguntas reales a un buscador con IA (hoy Perplexity) y te decimos si tu campo aparece o se cita. Además puntuamos de 0 a 100 lo preparada que está tu web para la IA y te decimos qué mejorar primero. Los cambios en tu web los haces tú o tu agencia.",
+      "matiz": "Se activa con un alta que hacemos contigo cuando aceptas tu propuesta.",
+      "measure": "Si Perplexity menciona o cita tu campo, y lo preparada que está tu web para la IA (de 0 a 100).",
+      "agents": "Preguntan cada mes a un buscador con IA si te cita, y preparan y te envían el informe.",
+      "human": ""
+    },
+    "competitiva": {
+      "name": "Visibilidad competitiva",
+      "status": "matiz",
+      "visibilityPiece": true,
+      "excludes": ["monitor"],
+      "text": "Lo mismo que Visibilidad en IA, con comparación frente a hasta 5 competidores.",
+      "matiz": "Se activa con un alta que hacemos contigo cuando aceptas tu propuesta.",
+      "measure": "Si Perplexity menciona o cita tu campo frente a hasta 5 competidores.",
+      "agents": "Preguntan cada mes a un buscador con IA si te cita a ti y a tus competidores, y preparan y te envían el informe.",
+      "human": ""
+    },
+    "linkedin": {
+      "name": "LinkedIn del club",
+      "status": "disponible",
+      "visibilityPiece": true,
+      "text": "Publicaciones pensadas para golf de empresa, eventos y patrocinadores. Se preparan y programan solas según la estrategia acordada contigo; puedes revisarlas o cambiarlas cuando quieras.",
+      "measure": "Publicaciones hechas frente a las planificadas.",
+      "agents": "Preparan y programan las publicaciones de tu LinkedIn.",
+      "human": "Acordamos contigo la estrategia y comprobamos quién es el titular de la cuenta antes del alta."
+    },
+    "nota": {
+      "name": "Difusión de tu nota de prensa",
+      "status": "matiz",
+      "visibilityPiece": true,
+      "requires": ["linkedin"],
+      "text": "Distribuimos tu nota en portales digitales y te enviamos el informe de dónde ha salido. Las 2 notas que hemos difundido salieron en 83 publicaciones (27/08/2026) y en 75 (05/10/2026); algunas, en secciones de notas de empresa.",
+      "matiz": "Sale en portales digitales, no en grandes diarios. Una persona revisa tu nota antes de difundirla.",
+      "measure": "Dónde ha salido tu nota, con su informe.",
+      "agents": "Redactan el borrador de tu nota de prensa.",
+      "human": "Una persona revisa tu nota antes de difundirla."
+    },
+    "mercados": {
+      "name": "Informe de mercados emisores",
+      "status": "matiz",
+      "visibilityPiece": false,
+      "oneOff": true,
+      "text": "De qué países vienen los golfistas que más gastan por viaje, cuándo viajan y por dónde llegan. Pago único, precio en tu propuesta.",
+      "matiz": "Se hace con fuentes públicas nacionales, no con datos de tu campo.",
+      "measure": "Qué mercados extranjeros gastan más por viaje, cuándo viajan y por dónde llegan.",
+      "agents": "",
+      "human": "Te entregamos el informe una sola vez."
+    }
+  },
+  "diagnostico": {
+    "name": "Diagnóstico de visibilidad",
+    "status": "matiz",
+    "matiz": "Se activa con un alta que hacemos contigo cuando aceptas tu propuesta.",
+    "text": "Tu punto de partida: cómo está hoy tu presencia en la IA y qué mejorar primero. Los cambios en tu web los haces tú o tu agencia. Incluido si tu plan lleva 2 o más piezas de visibilidad o comunicación.",
+    "includedText": "Incluido en tu plan (llevas 2 o más piezas de visibilidad o comunicación).",
+    "setupText": "Pago de inicio: con una sola pieza de visibilidad o comunicación no va incluido.",
+    "measure": "Cómo está hoy tu presencia en la IA y qué mejorar primero."
+  },
+  "plans": {
+    "datos": {
+      "name": "Plan Datos",
+      "tagline": "Entiende tus franjas flojas",
+      "path": "/plan-datos/",
+      "objective": "franjas",
+      "pieces": ["analiza", "monitor"],
+      "optional": ["mercados"],
+      "badge": "Con matiz",
+      "badgeNote": "Todavía no lo activamos: antes revisamos las condiciones de uso de GolfManager y TeeOne y preparamos tu informe. Después, con tu autorización por escrito.",
+      "seoDescription": "Plan Datos de Hades Golf: estimar las plazas libres de tu campo por franja y día y comprobar si Perplexity te cita. Sin cobro online.",
+      "measure": [
+        "Plazas libres estimadas por franja y día.",
+        "Si Perplexity cita tu campo cuando se le pregunta por campos de tu zona."
+      ],
+      "agents": [
+        "Revisan cada mañana la disponibilidad de tu sistema de reservas.",
+        "Preguntan a Perplexity cada mes si te cita y te envían el informe."
+      ],
+      "forWho": "Campos comerciales o mixtos que usan GolfManager o TeeOne.",
+      "metric": "Porcentaje estimado de plazas libres por franja, mes a mes, y las decisiones de oferta o precio que tomes con esos datos. No te prometemos llenar el campo."
+    },
+    "visibilidad": {
+      "name": "Plan Visibilidad",
+      "tagline": "Sabe si la IA te encuentra",
+      "path": "/plan-visibilidad/",
+      "objective": "ia",
+      "pieces": ["monitor"],
+      "optional": ["competitiva"],
+      "badge": "Con matiz",
+      "badgeNote": "Se activa con un alta que hacemos contigo cuando aceptas tu propuesta.",
+      "seoDescription": "Plan Visibilidad de Hades Golf: cada mes medimos si Perplexity cita tu campo, puntuamos lo preparada que está tu web para la IA y te decimos qué mejorar primero. Sin cobro online.",
+      "measure": [
+        "En qué porcentaje de preguntas Perplexity menciona o cita tu campo.",
+        "Lo preparada que está tu web para la IA, de 0 a 100."
+      ],
+      "agents": [
+        "Hacen cada mes preguntas reales a Perplexity sobre campos de tu zona.",
+        "Revisan tu web para puntuar lo preparada que está para la IA y preparan el informe."
+      ],
+      "forWho": "Cualquier campo u hotel de golf con turismo.",
+      "metric": "Porcentaje de preguntas en las que Perplexity menciona o cita tu campo. Medimos cada mes y te decimos qué mejorar primero; los cambios en tu web los haces tú o tu agencia (el LinkedIn y la nota del Plan Comunicación ayudan a que se hable de ti). El efecto en ventas es difícil de demostrar, y te lo decimos."
+    },
+    "comunicacion": {
+      "name": "Plan Comunicación",
+      "tagline": "Posiciónate en el sector",
+      "path": "/plan-comunicacion/",
+      "objective": "posicionar",
+      "pieces": ["linkedin", "monitor"],
+      "optional": ["nota"],
+      "badge": "",
+      "badgeNote": "",
+      "seoDescription": "Plan Comunicación de Hades Golf: LinkedIn del club para golf de empresa y patrocinadores, visibilidad en IA y, si quieres, difusión de tu nota.",
+      "measure": [
+        "Publicaciones hechas frente a las planificadas.",
+        "Menciones de tu campo en Perplexity.",
+        "En la versión completa, dónde ha salido tu nota, con su informe."
+      ],
+      "agents": [
+        "Preparan y programan las publicaciones del LinkedIn de tu club.",
+        "Preguntan cada mes a Perplexity si te cita.",
+        "En la versión completa, redactan el borrador de tu nota (lo revisa una persona antes de difundirla)."
+      ],
+      "forWho": "Clubes de socios, mixtos, comerciales y hoteles de golf.",
+      "metric": "Publicaciones hechas frente a las planificadas, publicaciones de tu nota y menciones en Perplexity. Captar socios nuevos: hoy no tenemos ninguna pieza que lo haga, y te lo decimos."
+    }
+  },
+  "rules": {
+    "taxes": "Impuestos no incluidos.",
+    "noOnline": "Sin cobro online. El precio va en la propuesta que te prepara tu comercial de Hades.",
+    "noOnlineContact": "Sin cobro online: te enviamos una propuesta.",
+    "priceHidden": "Precio en tu propuesta",
+    "analizaUnknown": "Lo comprobamos contigo",
+    "onlySoon": "De lo que has marcado, hoy no tenemos nada disponible. Lo que te interesa queda guardado en el enlace de tu plan.",
+    "allRemoved": "Has quitado todas las piezas de tu plan.",
+    "lastVisibility": "Todos los planes llevan una pieza de visibilidad en IA. Puedes cambiarla por Visibilidad competitiva."
+  },
+  "configuratorTexts": {
+    "intro": "Cuéntanos qué tipo de campo tienes y qué quieres conseguir. Te enseñamos qué podemos hacer hoy y qué todavía no, sin letra pequeña.",
+    "soonOff": "Si te interesa, márcalo: se guarda en el enlace de tu plan.",
+    "soonOn": "Si te interesa, márcalo: va en el enlace de tu plan y lo tendremos en cuenta cuando nos lo envíes.",
+    "ctaOff": "Guarda tu plan",
+    "ctaOffHelp": "Copia el resumen y el enlace de tu plan para enseñárselo a tu comercial de Hades.",
+    "visitOnly": "Hoy la Radiografía y la propuesta las entrega nuestro comercial en visita; todavía no se pueden pedir desde esta web.",
+    "ctaOn": "Pide tu Radiografía gratuita y tu propuesta",
+    "copy": "Copiar mi plan",
+    "mailSubject": "Radiografía y propuesta – "
+  }
+}

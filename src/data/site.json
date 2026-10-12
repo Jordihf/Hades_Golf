@@ -1,0 +1,22 @@
+{
+  "flags": {
+    "SHOW_PRICES": false,
+    "CONTACT_ENABLED": false,
+    "LEGAL_ENTITY_READY": false
+  },
+  "siteUrl": "https://hadesgolf.com",
+  "brand": "Hades Golf",
+  "contactEmail": "",
+  "legal": {
+    "holder": "",
+    "taxId": "",
+    "registryName": "",
+    "address": "",
+    "email": "",
+    "brandNote": ""
+  },
+  "seo": {
+    "title": "Hades Golf · Datos y automatización para campos de golf",
+    "description": "Ocupación estimada por franjas, visibilidad en un buscador con IA (Perplexity), LinkedIn del club y difusión de notas. Arma tu plan según tu objetivo."
+  }
+}

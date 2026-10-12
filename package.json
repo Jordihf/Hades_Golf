@@ -5,16 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "lint": "tsc"
+    "check": "HADES_WITH_PRICES=1 vite build --ssr scripts/check-plan.ts --outDir .check --emptyOutDir --logLevel warn && node .check/check-plan.js",
+    "lint": "tsc",
+    "images": "python3 scripts/make-images.py"
   },
   "dependencies": {
-    "@google/genai": "^1.40.0",
-    "lucide-react": "^0.563.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.15.0"
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
