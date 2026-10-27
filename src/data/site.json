@@ -1,12 +1,13 @@
 {
   "flags": {
-    "SHOW_PRICES": false,
+    "SHOW_PRICES": true,
     "CONTACT_ENABLED": false,
     "LEGAL_ENTITY_READY": false
   },
   "siteUrl": "https://hadesgolf.com",
   "brand": "Hades Golf",
-  "contactEmail": "",
+  "contactEmail": "info@hadesgolf.com",
+  "contactCc": "hello@stellarisgolf.com",
   "legal": {
     "holder": "",
     "taxId": "",
@@ -16,7 +17,7 @@
     "brandNote": ""
   },
   "seo": {
-    "title": "Hades Golf · Datos y automatización para campos de golf",
-    "description": "Ocupación estimada por franjas, visibilidad en un buscador con IA (Perplexity), LinkedIn del club y difusión de notas. Arma tu plan según tu objetivo."
+    "title": "Hades Golf · La tienda de IA para campos de golf",
+    "description": "Soluciones de IA para clubes, campos y hoteles de golf: xGolf, nota de prensa, visibilidad en IA, ocupación y ventas fuera. Arma tu plan y mira el total."
   }
 }

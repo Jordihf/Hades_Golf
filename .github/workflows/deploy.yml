@@ -31,15 +31,7 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      # Solo si existe el secreto PRICES_JSON (ver README, «Precios»). Sin él no hay importes y,
-      # si SHOW_PRICES=true, el build falla en vez de publicar a medias.
-      - name: Prices (optional secret)
-        env:
-          PRICES_JSON: ${{ secrets.PRICES_JSON }}
-        run: |
-          if [ -n "$PRICES_JSON" ]; then printf '%s' "$PRICES_JSON" > src/data/prices.json; fi
-      # tsc sin @types/react todavía no comprueba el JSX: ver README («Comprobaciones»).
-      - name: Basic tsc (no React types yet) and configurator rules
+      - name: Types (tsc strict) and shop rules
         run: npm run lint && npm run check
       - name: Build
         run: npm run build

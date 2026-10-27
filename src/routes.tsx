@@ -1,12 +1,11 @@
 import React from 'react';
-import plans from './data/plans.json';
+import { PRODUCTS } from './data/catalog';
+import { SHOW_PRICES } from './lib/flags';
 import site from './data/site.json';
 import { FAQ } from './content';
 import Home from './pages/Home';
-import PlanPage from './pages/PlanPage';
 import Radiografia from './pages/Radiografia';
 import { AvisoLegal, Cookies, NotFound, Privacidad } from './pages/Legal';
-import type { PlanId } from './lib/plan';
 
 export interface Route {
   path: string;
@@ -25,29 +24,23 @@ const ORG = {
   description: site.seo.description,
 };
 
-const service = (id: PlanId) => {
-  const p = plans.plans[id];
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: `${p.name} · ${p.tagline}`,
-    serviceType: 'Datos y automatización para campos de golf',
-    areaServed: { '@type': 'Country', name: 'España' },
-    provider: { '@type': 'Organization', name: site.brand, url: `${site.siteUrl}/` },
-    url: `${site.siteUrl}${p.path}`,
-    description: `${p.forWho} ${p.measure.join(' ')}`,
-  };
-};
-
-const planRoute = (id: PlanId): Route => {
-  const p = plans.plans[id];
-  return {
-    path: p.path,
-    title: `${p.name} · ${p.tagline} | Hades Golf`,
-    description: p.seoDescription,
-    render: () => <PlanPage id={id} />,
-    jsonLd: [ORG, service(id)],
-  };
+/** Catálogo con precios públicos (SHOW_PRICES=true). */
+const CATALOG = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Tienda Hades Golf',
+  url: `${site.siteUrl}/`,
+  itemListElement: PRODUCTS.flatMap((p) =>
+    p.variants.map((v) => ({
+      '@type': 'Offer',
+      name: p.variants.length > 1 ? v.name : p.name,
+      description: p.line,
+      price: v.price,
+      priceCurrency: 'EUR',
+      availability: p.status === 'reserva' ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
+      itemOffered: { '@type': 'Service', name: p.name, areaServed: { '@type': 'Country', name: 'España' }, provider: { '@type': 'Organization', name: site.brand } },
+    })),
+  ),
 };
 
 export const ROUTES: Route[] = [
@@ -58,6 +51,7 @@ export const ROUTES: Route[] = [
     render: () => <Home />,
     jsonLd: [
       ORG,
+      ...(SHOW_PRICES ? [CATALOG] : []),
       {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -69,14 +63,11 @@ export const ROUTES: Route[] = [
       },
     ],
   },
-  planRoute('datos'),
-  planRoute('visibilidad'),
-  planRoute('comunicacion'),
   {
     path: '/radiografia/',
     title: 'Radiografía de tu campo, gratis | Hades Golf',
     description:
-      'Una página con lo que se ve de tu campo desde fuera: preparación para la IA, idiomas, medición de anuncios, sistema de reservas y mercados extranjeros. Gratis.',
+      'Lo que se ve de tu campo desde fuera, en una página: preparación para la IA, idiomas, reservas y mercados extranjeros. Gratis y sin contraseñas.',
     render: () => <Radiografia />,
     jsonLd: [ORG],
   },

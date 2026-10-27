@@ -1,0 +1,51 @@
+{
+  "version": "2026-10-27",
+  "currency": "EUR",
+  "discounts": {
+    "annualPct": 6,
+    "packPct": 5,
+    "packMin": 3
+  },
+  "products": {
+    "radiografia": {
+      "gratis": 0
+    },
+    "medio": {
+      "anual": 77,
+      "mensual": 199,
+      "puntual": 99
+    },
+    "redes": {
+      "noticia": 99,
+      "recomendacion": 149,
+      "pack4": 349
+    },
+    "nota": {
+      "mes": 238
+    },
+    "visibilidad": {
+      "mes": 71
+    },
+    "competitiva": {
+      "mes": 179
+    },
+    "diagnostico": {
+      "unico": 300
+    },
+    "ocupacion": {
+      "mes": 69
+    },
+    "campanas": {
+      "mes": 149
+    },
+    "golfy": {
+      "mes": 99
+    },
+    "turoperadores": {
+      "envio": 249
+    },
+    "mercados": {
+      "unico": 390
+    }
+  }
+}

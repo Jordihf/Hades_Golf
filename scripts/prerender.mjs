@@ -30,7 +30,7 @@ function page(route, html) {
     `<meta property="og:image" content="${site.siteUrl}/og-hades.png">`,
     '<meta property="og:image:width" content="1200">',
     '<meta property="og:image:height" content="630">',
-    '<meta property="og:image:alt" content="Hades Golf: datos y automatización para la gerencia de tu campo de golf">',
+    '<meta property="og:image:alt" content="Hades Golf: la tienda de IA para campos de golf">',
     '<meta name="twitter:card" content="summary_large_image">',
     ...(route.jsonLd ?? []).map((o) => `<script type="application/ld+json">${json(o)}</script>`),
   ]
@@ -72,6 +72,10 @@ const oldPosts = [
 write('blog/index.html', redirect);
 oldPosts.forEach((id) => write(`blog/${id}/index.html`, redirect));
 
+// Las páginas de plan del configurador por pasos (12/10) se retiran: la portada es la tienda.
+const OLD_PLAN_PAGES = ['plan-datos', 'plan-visibilidad', 'plan-comunicacion'];
+OLD_PLAN_PAGES.forEach((id) => write(`${id}/index.html`, redirect));
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${ROUTES.map((r) => `  <url><loc>${site.siteUrl}${r.path}</loc></url>`).join('\n')}
@@ -101,4 +105,4 @@ if (problems.length) {
   console.error(`El build no se puede publicar:\n${problems.map((p) => `  · ${p}`).join('\n')}`);
   process.exit(1);
 }
-console.log(`Prerenderizadas ${ROUTES.length} páginas + 404, redirecciones del blog, sitemap.xml y robots.txt.`);
+console.log(`Prerenderizadas ${ROUTES.length} páginas + 404, redirecciones (blog y páginas de plan), sitemap.xml y robots.txt.`);

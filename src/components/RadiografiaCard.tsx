@@ -2,10 +2,10 @@ import React from 'react';
 import Icon, { IconName } from './Icon';
 
 export const RADIO_TEXT =
-  'Una página con lo que se ve de tu campo desde fuera: si tu web está preparada para que la IA la cite, en qué idiomas está tu web, si tu web mide los anuncios, qué sistema de reservas se ve y qué mercados extranjeros gastan más por viaje. Gratis y sin pedirte contraseñas.';
+  'Lo que se ve de tu campo desde fuera, en una página: si tu web está lista para que la IA la cite, sus idiomas, si mide los anuncios, qué sistema de reservas usa y qué mercados extranjeros gastan más. Gratis y sin contraseñas.';
 
 export const RADIO_DIFF =
-  'La Radiografía es una página con señales públicas. El Diagnóstico de visibilidad es un análisis a fondo de tu presencia en IA, con competidores y una hoja de ruta.';
+  'La Radiografía es una foto rápida con señales públicas. El Diagnóstico de visibilidad es el análisis a fondo de tu presencia en la IA, con tu hoja de ruta.';
 
 type Level = 'bajo' | 'medio' | 'ok' | 'info';
 const LEVEL_TXT: Record<Level, string> = { bajo: 'Por mejorar', medio: 'A revisar', ok: 'Bien', info: 'Dato' };
@@ -45,10 +45,10 @@ const ROWS: { icon: IconName; k: string; v: React.ReactNode; level: Level; next:
       </span>
     ),
     level: 'bajo',
-    next: 'Te decimos qué idiomas priorizar según tus mercados',
+    next: 'Qué idiomas priorizar según tus mercados',
   },
-  { icon: 'eye', k: '¿Tu web mide los anuncios?', v: 'No vemos ninguna etiqueta de medición', level: 'medio', next: 'Te lo señalamos (no gestionamos anuncios)' },
-  { icon: 'calendar', k: 'Sistema de reservas que se ve', v: 'GolfManager', level: 'ok', next: 'Podría estimarse tu ocupación (Plan Datos, con matiz)' },
+  { icon: 'eye', k: '¿Tu web mide los anuncios?', v: 'No vemos ninguna etiqueta de medición', level: 'medio', next: 'Te lo señalamos' },
+  { icon: 'calendar', k: 'Sistema de reservas que se ve', v: 'GolfManager', level: 'ok', next: 'Encaja con Ocupación' },
   {
     icon: 'chart',
     k: 'Mercados que más gastan por viaje',
@@ -94,7 +94,7 @@ const RadiografiaCard: React.FC = () => (
           <span style={{ width: `${(SCORE.got / SCORE.max) * 100}%` }} />
         </div>
         <span className="report-next">
-          <Icon name="arrow" size={16} /> Qué te proponemos: Diagnóstico (qué mejorar) y Plan Visibilidad (medir la mejora)
+          <Icon name="arrow" size={16} /> Qué te proponemos: Diagnóstico de visibilidad y Visibilidad en IA
         </span>
       </div>
     </div>
@@ -120,45 +120,6 @@ const RadiografiaCard: React.FC = () => (
       <span className="report-brand">Hades Golf · Radiografía</span>
       Campo inventado para enseñarte el formato. Salvo los mercados (dato nacional), los valores no corresponden a ningún club real.
     </figcaption>
-  </figure>
-);
-
-/** Miniatura del informe del Plan Visibilidad, con datos inventados. */
-export const VisibilitySample: React.FC = () => (
-  <figure className="report report--mini" aria-labelledby="vis-ejemplo">
-    <div className="report-head">
-      <div>
-        <span className="report-kicker">Plan Visibilidad · Ejemplo</span>
-        <h3 id="vis-ejemplo" className="report-title">Club de Golf Ejemplo</h3>
-        <span className="report-sub">Informe del mes · campo ficticio</span>
-      </div>
-      <span className="sample-label">Datos de ejemplo</span>
-    </div>
-    <dl className="report-rows">
-      <div className="report-row">
-        <dt>
-          <Icon name="spark" size={20} />
-          Preguntas en las que Perplexity cita tu campo
-        </dt>
-        <dd>
-          <span className="report-val">{'15 %'}</span>
-          <span className="light light--medio">A revisar</span>
-        </dd>
-      </div>
-      <div className="report-row">
-        <dt>
-          <Icon name="doc" size={20} />
-          Preparación de tu web para la IA
-        </dt>
-        <dd>
-          <span className="report-val">41 de 100</span>
-          <span className="report-next">
-            <Icon name="arrow" size={16} /> Te decimos qué mejorar primero; los cambios los haces tú o tu agencia
-          </span>
-        </dd>
-      </div>
-    </dl>
-    <figcaption className="small report-foot">Valores inventados para enseñarte el formato.</figcaption>
   </figure>
 );
 

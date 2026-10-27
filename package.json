@@ -1,5 +1,5 @@
 {
-  "name": "hades-golf-landing---ai-sales-agent",
+  "name": "hades-golf-tienda",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "check": "HADES_WITH_PRICES=1 vite build --ssr scripts/check-plan.ts --outDir .check --emptyOutDir --logLevel warn && node .check/check-plan.js",
+    "check": "vite build --ssr scripts/check-plan.ts --outDir .check --emptyOutDir --logLevel warn && node .check/check-plan.js",
     "lint": "tsc",
-    "images": "python3 scripts/make-images.py"
+    "images": "python3 scripts/make-images.py",
+    "images:opt": "python3 scripts/optimize-images.py"
   },
   "dependencies": {
     "react": "^19.2.4",

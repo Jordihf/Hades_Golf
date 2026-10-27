@@ -1,0 +1,50 @@
+{
+  "_": "Huecos de imagen. Deja el original (JPG o PNG) en static/img/<name>.jpg y ejecuta: npm run images:opt. Si falta, la web pone el marcador de marca.",
+  "slots": [
+    {
+      "name": "hero",
+      "w": 2400,
+      "h": 1350,
+      "use": "Portada, escritorio (16:9). Titular abajo a la izquierda.",
+      "min": 1600
+    },
+    {
+      "name": "hero-movil",
+      "w": 1080,
+      "h": 1350,
+      "use": "Portada, móvil (4:5). Titular abajo a la izquierda."
+    },
+    {
+      "name": "escaparate-conocer",
+      "w": 1600,
+      "h": 1000,
+      "use": "Cabecera del escaparate «Que te conozcan» (16:10)."
+    },
+    {
+      "name": "escaparate-llenar",
+      "w": 1600,
+      "h": 1000,
+      "use": "Cabecera del escaparate «Llena tu campo» (16:10)."
+    },
+    {
+      "name": "escaparate-fuera",
+      "w": 1600,
+      "h": 1000,
+      "use": "Cabecera del escaparate «Vende fuera» (16:10)."
+    },
+    {
+      "name": "visita",
+      "w": 1200,
+      "h": 1500,
+      "use": "«Cómo funciona»: tu comercial te lo presenta (4:5).",
+      "min": 1000
+    },
+    {
+      "name": "cierre",
+      "w": 2400,
+      "h": 1000,
+      "use": "Banda final de llamada a la acción (12:5).",
+      "min": 1600
+    }
+  ]
+}

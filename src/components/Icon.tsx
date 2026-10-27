@@ -92,6 +92,52 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M15.5 8.5V6a1.5 1.5 0 00-1.5-1.5H6A1.5 1.5 0 004.5 6v8A1.5 1.5 0 006 15.5h2.5" />
     </>
   ),
+  plus: <path d="M12 5v14M5 12h14" />,
+  x: <path d="M6 6l12 12M18 6L6 18" />,
+  chevL: <path d="M14.5 6l-6 6 6 6" />,
+  chevR: <path d="M9.5 6l6 6-6 6" />,
+  menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+  users: (
+    <>
+      <circle cx="9" cy="8.5" r="3" />
+      <path d="M3.5 19c.6-3 2.8-4.8 5.5-4.8s4.9 1.8 5.5 4.8" />
+      <circle cx="16.5" cy="9.5" r="2.4" />
+      <path d="M15.5 14.4c2.4-.3 4.4 1.2 5 4.1" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="3.5" y="6" width="17" height="12" rx="2" />
+      <path d="M4 7l8 6 8-6" />
+    </>
+  ),
+  news: (
+    <>
+      <rect x="4" y="4.5" width="13" height="15" rx="1.5" />
+      <path d="M17 8.5h2.5V18a1.5 1.5 0 01-3 0V8.5M7 8.5h7M7 12h7M7 15.5h4" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.5" />
+    </>
+  ),
+  camera: (
+    <>
+      <rect x="3.5" y="7" width="17" height="12" rx="2.5" />
+      <circle cx="12" cy="13" r="3.5" />
+      <path d="M8.5 7l1.5-2.5h4L15.5 7" />
+    </>
+  ),
+  send: <path d="M20.5 3.5L10 14M20.5 3.5l-6.5 17-4-6.5-6.5-4z" />,
+  bag: (
+    <>
+      <path d="M5 8h14l-1 12H6z" />
+      <path d="M9 10V7a3 3 0 016 0v3" />
+    </>
+  ),
 };
 
 export type IconName = keyof typeof PATHS;

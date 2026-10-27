@@ -16,14 +16,19 @@ const Holder: React.FC = () =>
       </li>
     </ul>
   ) : (
-    <p>Los datos del titular de esta web todavía no están publicados en esta página.</p>
+    <p>Datos del titular en actualización.</p>
   );
 
 const Page: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <section className="section page legal" aria-labelledby="legal-title">
     <div className="wrap narrow">
-      <h1 id="legal-title">{title}</h1>
-      {children}
+      <div className="legal-card">
+        <div className="dots dots--tr" aria-hidden="true" />
+        <h1 id="legal-title" className="display display--lg">
+          {title}
+        </h1>
+        {children}
+      </div>
     </div>
   </section>
 );
@@ -48,8 +53,7 @@ export const AvisoLegal: React.FC = () => (
     )}
     <h2 className="h3">Contenidos</h2>
     <p>
-      Las cifras que publicamos indican su contexto y su fecha. Los ejemplos marcados como «Datos de ejemplo» son inventados y no
-      corresponden a ningún campo real.
+      Los ejemplos marcados como «Datos de ejemplo» o «Ejemplo ilustrativo» son inventados y no corresponden a ningún campo real.
     </p>
   </Page>
 );
@@ -60,7 +64,7 @@ export const Privacidad: React.FC = () => (
     <Holder />
     <h2 className="h3">Qué datos tratamos</h2>
     <p>
-      Esta web no tiene cuentas de usuario. El configurador funciona entero en tu navegador: tus elecciones solo se guardan en el
+      Esta web no tiene cuentas de usuario. La tienda funciona entera en tu navegador: tus elecciones solo se guardan en el
       enlace de tu plan{CONTACT_ON ? ', y solo nos llegan si nos lo envías por correo.' : ', y no nos llegan.'}
     </p>
     {CONTACT_ON && (
@@ -111,8 +115,8 @@ export const Cookies: React.FC = () => (
   <Page title="Cookies">
     <p>No usamos cookies.</p>
     <p>
-      Tampoco usamos analítica, scripts de terceros ni fuentes externas: todo lo que carga esta web se sirve desde la propia web. El
-      configurador guarda tus elecciones solo en el enlace de tu plan.
+      Tampoco usamos analítica, scripts de terceros ni fuentes externas: todo lo que carga esta web se sirve desde la propia web. La
+      tienda guarda tus elecciones solo en el enlace de tu plan.
     </p>
   </Page>
 );
@@ -121,7 +125,7 @@ export const NotFound: React.FC = () => (
   <Page title="Esta página no existe">
     <p>Puede que el enlace sea antiguo. Las páginas del antiguo blog ya no están publicadas.</p>
     <p>
-      <a href="/" className="btn">Ir a la portada</a>
+      <a href="/" className="pill pill--green pill--big">Ir a la tienda</a>
     </p>
   </Page>
 );
