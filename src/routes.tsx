@@ -71,9 +71,9 @@ export const ROUTES: Route[] = [
     render: () => <Radiografia />,
     jsonLd: [ORG],
   },
-  { path: '/aviso-legal/', title: 'Aviso legal | Hades Golf', description: 'Aviso legal de hadesgolf.com.', render: () => <AvisoLegal /> },
-  { path: '/privacidad/', title: 'Privacidad | Hades Golf', description: 'Política de privacidad de hadesgolf.com.', render: () => <Privacidad /> },
-  { path: '/cookies/', title: 'Cookies | Hades Golf', description: 'hadesgolf.com no usa cookies.', render: () => <Cookies /> },
+  { path: '/aviso-legal/', title: 'Aviso legal de hadesgolf.com | Hades Golf', description: 'Aviso legal de hadesgolf.com: quién es el titular de la web, qué es esta web y cómo se marcan los datos de ejemplo.', render: () => <AvisoLegal /> },
+  { path: '/privacidad/', title: 'Política de privacidad | Hades Golf', description: 'Política de privacidad de hadesgolf.com: qué datos tratamos, alojamiento en GitHub Pages, sin cookies ni analítica, y tus derechos.', render: () => <Privacidad /> },
+  { path: '/cookies/', title: 'Política de cookies | Hades Golf', description: 'hadesgolf.com no usa cookies, ni analítica, ni scripts de terceros: todo lo que carga la web se sirve desde la propia web.', render: () => <Cookies /> },
 ];
 
 export const NOT_FOUND: Route = {
